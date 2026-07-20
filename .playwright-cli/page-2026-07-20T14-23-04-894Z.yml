@@ -1,0 +1,81 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]: SFL PLATFORM
+      - generic [ref=e7]: // SATELLITE FILING & LICENSING
+    - generic [ref=e8]:
+      - generic [ref=e9]: UCS1001 · TEAM PROPOSAL
+      - generic [ref=e10]: SYNTHESIS
+      - generic [ref=e11]: 08 / 15
+  - generic [ref=e245]:
+    - generic [ref=e246]:
+      - generic [ref=e247]: 06 · LITERATURE SYNTHESIS
+      - generic [ref=e249]:
+        - heading "Three literatures. One design rule." [level=1] [ref=e250]: Three literatures.One design rule.
+        - paragraph [ref=e251]:
+          - text: "Each source had to answer the same question: how do we remove friction"
+          - strong [ref=e252]: without
+          - text: automating regulatory judgement?
+    - generic [ref=e253]:
+      - generic [ref=e254]:
+        - generic [ref=e255]: SINGAPORE DIGITAL GOVERNMENT
+        - generic [ref=e256]: Singpass · Myinfo Business · GoBusiness[6] [7] [8] [15]
+        - paragraph [ref=e257]: Agencies already hold verified business data and reuse it with consent, so applicants stop re-declaring what the government can already look up.
+        - generic [ref=e258]:
+          - generic [ref=e259]: "01"
+          - strong [ref=e260]: Reuse verified data
+        - generic [ref=e261]: → SHAPES TIERS 1–2
+      - generic [ref=e262]:
+        - generic [ref=e263]: REGULATOR E-FILING · FCC ICFS
+        - generic [ref=e264]: Form 312 · file numbers · early dismissal[9] [10] [11]
+        - paragraph [ref=e265]: Structured electronic filing lets a regulator assign a reference and test completeness the moment an application arrives, instead of weeks later.
+        - generic [ref=e266]:
+          - generic [ref=e267]: "02"
+          - strong [ref=e268]: Validate at the point of entry
+        - generic [ref=e269]: → SHAPES TIER 2
+      - generic [ref=e270]:
+        - generic [ref=e271]: SPECTRUM-MANAGEMENT PLATFORMS
+        - generic [ref=e272]: LS telcom mySPECTRA · ATDI ICS Portal[12] [13]
+        - paragraph [ref=e273]: The ITU-format and interference checks IMDA needs already exist as configurable products proven with peer regulators — the workflow is on the market.
+        - generic [ref=e274]:
+          - generic [ref=e275]: "03"
+          - strong [ref=e276]: Configure, don't rebuild
+        - generic [ref=e277]: → SHAPES TIER 3
+    - generic [ref=e278]:
+      - generic [ref=e279]:
+        - generic [ref=e280]: WHERE ALL THREE AGREE
+        - generic [ref=e287]: None of themautomates the decision.
+      - generic [ref=e288]:
+        - text: Every system structures the
+        - strong [ref=e289]: routine work
+        - text: and leaves the
+        - strong [ref=e290]: expert judgement
+        - text: with the regulator [8], [10], [12], [13]
+      - generic [ref=e291]: → SHAPES TIER 4OFFICER DECIDES
+    - generic [ref=e292]: Synthesis of sources [6]–[13] and [15]. Full IEEE references appear on the final slide.
+  - generic [ref=e29]:
+    - generic [ref=e30]:
+      - button "S1 · CHENGXI" [ref=e31] [cursor=pointer]
+      - button "S2 · SUBQUE" [ref=e32] [cursor=pointer]
+      - button "S3 · JIN YONG" [ref=e33] [cursor=pointer]
+      - button "S4 · PEI QI" [ref=e34] [cursor=pointer]
+      - button "S5 · RACHEL" [ref=e35] [cursor=pointer]
+    - generic [ref=e38]:
+      - button [ref=e39] [cursor=pointer]
+      - button [ref=e40] [cursor=pointer]
+      - button [ref=e41] [cursor=pointer]
+      - button [ref=e42] [cursor=pointer]
+      - button [ref=e43] [cursor=pointer]
+      - button [ref=e44] [cursor=pointer]
+      - button [ref=e45] [cursor=pointer]
+      - button [active] [ref=e46] [cursor=pointer]
+      - button [ref=e47] [cursor=pointer]
+      - button [ref=e48] [cursor=pointer]
+      - button [ref=e49] [cursor=pointer]
+      - button [ref=e50] [cursor=pointer]
+      - button [ref=e51] [cursor=pointer]
+      - button [ref=e52] [cursor=pointer]
+      - button [ref=e53] [cursor=pointer]
+    - generic [ref=e54]:
+      - button "←" [ref=e55] [cursor=pointer]
+      - button "→" [ref=e56] [cursor=pointer]

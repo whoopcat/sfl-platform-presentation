@@ -1,0 +1,69 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]: SFL PLATFORM
+      - generic [ref=e7]: // SATELLITE FILING & LICENSING
+    - generic [ref=e8]:
+      - generic [ref=e9]: UCS1001 · TEAM PROPOSAL
+      - generic [ref=e10]: RECON·INTL
+      - generic [ref=e11]: 07 / 15
+  - generic [ref=e211]:
+    - generic [ref=e212]:
+      - generic [ref=e213]: 05 · RECON — INTERNATIONAL
+      - heading "Peer regulators made this move years ago" [level=1] [ref=e215]
+    - generic [ref=e216]:
+      - generic [ref=e217]:
+        - generic [ref=e218]: FCC · UNITED STATES
+        - generic [ref=e219]: ICFS — electronic filing is mandatory
+        - generic [ref=e220]:
+          - generic [ref=e221]:
+            - generic [ref=e222]: →
+            - generic [ref=e223]: Satellite applications filed electronically via Form 312 — paper not accepted [9]
+          - generic [ref=e224]:
+            - generic [ref=e225]: →
+            - generic [ref=e226]: File number assigned at submission; routed straight to an analyst [9], [10]
+          - generic [ref=e227]:
+            - generic [ref=e228]: →
+            - generic [ref=e229]: Incomplete applications dismissed early — not discovered late [10]
+      - generic [ref=e230]:
+        - generic [ref=e231]: COMMERCIAL ENGINES
+        - generic [ref=e232]: The tech is off the shelf
+        - generic [ref=e233]:
+          - generic [ref=e234]:
+            - generic [ref=e235]: ◆
+            - generic [ref=e236]: LS telcom mySPECTRA — applicant portal + workflow [12]
+          - generic [ref=e237]:
+            - generic [ref=e238]: ◆
+            - generic [ref=e239]: ATDI ICS Portal — e-licensing, validation, billing [13]
+          - generic [ref=e240]:
+            - generic [ref=e241]: ◆
+            - generic [ref=e242]: Proven with peer regulators — configure, don't rebuild [13]
+    - paragraph [ref=e243]:
+      - strong [ref=e244]: "Combined approach:"
+      - text: local identity services + ICFS-style workflow + configured engines — judgement stays with IMDA.
+  - generic [ref=e29]:
+    - generic [ref=e30]:
+      - button "S1 · CHENGXI" [ref=e31] [cursor=pointer]
+      - button "S2 · SUBQUE" [ref=e32] [cursor=pointer]
+      - button "S3 · JIN YONG" [ref=e33] [cursor=pointer]
+      - button "S4 · PEI QI" [ref=e34] [cursor=pointer]
+      - button "S5 · RACHEL" [ref=e35] [cursor=pointer]
+    - generic [ref=e38]:
+      - button [ref=e39] [cursor=pointer]
+      - button [ref=e40] [cursor=pointer]
+      - button [ref=e41] [cursor=pointer]
+      - button [ref=e42] [cursor=pointer]
+      - button [ref=e43] [cursor=pointer]
+      - button [ref=e44] [cursor=pointer]
+      - button [active] [ref=e45] [cursor=pointer]
+      - button [ref=e46] [cursor=pointer]
+      - button [ref=e47] [cursor=pointer]
+      - button [ref=e48] [cursor=pointer]
+      - button [ref=e49] [cursor=pointer]
+      - button [ref=e50] [cursor=pointer]
+      - button [ref=e51] [cursor=pointer]
+      - button [ref=e52] [cursor=pointer]
+      - button [ref=e53] [cursor=pointer]
+    - generic [ref=e54]:
+      - button "←" [ref=e55] [cursor=pointer]
+      - button "→" [ref=e56] [cursor=pointer]

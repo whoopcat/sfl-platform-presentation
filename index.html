@@ -66,6 +66,8 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
    No ambient motion here — the step reveals carry the pacing, and nothing on this slide
    may look like a chart, because none of it is measured data. */
 .stream-col{position:relative;display:flex;flex-direction:column;gap:15px;background:rgba(17,24,35,.94);border:1px solid #2a3a50;border-top:3px solid var(--accent);border-radius:14px;padding:26px 26px 22px}
+.stream-col::before{content:"";position:absolute;right:19px;top:19px;width:34px;height:34px;border:1px solid var(--accent);border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;opacity:.36;transform:rotate(28deg)}
+.stream-col::after{content:"";position:absolute;right:29px;top:29px;width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 9px var(--accent);opacity:.7}
 .stream-head{font-family:'IBM Plex Mono',monospace;font-size:15px!important;letter-spacing:.14em;color:var(--accent)}
 .stream-cite{font-family:'IBM Plex Mono',monospace;font-size:14px!important;letter-spacing:.03em;color:#54677c;line-height:1.55}
 .stream-body{margin:0;font-size:21px;color:#9bb0c6;line-height:1.5;text-wrap:pretty}
@@ -74,6 +76,30 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
 .stream-rule strong{font-size:26px;font-weight:600;color:#e9eef5;line-height:1.2}
 .stream-tier{font-family:'IBM Plex Mono',monospace;font-size:14px!important;letter-spacing:.1em;color:var(--accent);opacity:.8}
 .converge-bar{display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;background:oklch(0.82 0.13 185 / .08);border:1px solid oklch(0.82 0.13 185 / .55);border-radius:14px;padding:24px 34px}
+/* Literature review visual system: signals move through a satellite network, while the
+   labelled evidence and regulatory decision remain the visual priority. */
+.recon-header{position:relative;min-height:112px;padding-right:300px}
+.orbit-scene{position:absolute;right:0;top:-28px;width:268px;height:146px;pointer-events:none;opacity:.9}
+.orbit-ring{position:absolute;border:1px solid oklch(0.82 0.13 185 / .33);border-radius:50%;transform:rotate(-20deg)}
+.orbit-ring.one{width:242px;height:78px;left:8px;top:35px}
+.orbit-ring.two{width:192px;height:104px;left:36px;top:21px;border-color:oklch(0.82 0.13 75 / .28);transform:rotate(24deg)}
+.orbit-earth{position:absolute;right:42px;bottom:0;width:74px;height:74px;border:1px solid #376486;border-radius:50%;background:radial-gradient(circle at 30% 27%,#31526f 0 4%,transparent 5%),radial-gradient(circle at 68% 58%,#294560 0 10%,transparent 11%),#101b29;box-shadow:inset -14px -10px 0 #091019,0 0 24px oklch(0.82 0.13 185 / .12)}
+.orbit-earth::after{content:"";position:absolute;inset:12px -7px;border-top:1px solid #376486;border-bottom:1px solid #376486;border-radius:50%;transform:rotate(-16deg)}
+.orbit-satellite{position:absolute;left:47px;top:24px;width:38px;height:16px;border:2px solid #e9eef5;border-radius:3px;background:#1b2b3d;transform:rotate(18deg);box-shadow:0 0 14px oklch(0.82 0.13 185 / .38)}
+.orbit-satellite::before,.orbit-satellite::after{content:"";position:absolute;top:1px;width:32px;height:10px;border:1px solid oklch(0.82 0.13 185 / .75);background:repeating-linear-gradient(90deg,#174861 0 5px,#0c2638 5px 7px)}
+.orbit-satellite::before{right:37px}.orbit-satellite::after{left:37px}
+.orbit-satellite i{position:absolute;right:-17px;top:5px;width:12px;height:4px;border-radius:0 50% 50% 0;background:#ffc857}
+.signal-beam{position:absolute;height:1px;transform-origin:left center;background:linear-gradient(90deg,oklch(0.82 0.13 185 / 0),oklch(0.82 0.13 185 / .9),oklch(0.82 0.13 185 / 0));box-shadow:0 0 8px oklch(0.82 0.13 185 / .5)}
+.signal-beam.a{left:86px;top:61px;width:105px;transform:rotate(31deg)}.signal-beam.b{left:85px;top:57px;width:128px;transform:rotate(1deg);background:linear-gradient(90deg,oklch(0.82 0.13 75 / 0),oklch(0.82 0.13 75 / .9),oklch(0.82 0.13 75 / 0))}
+.evidence-card{position:relative;overflow:hidden}
+.evidence-card::after{content:"";position:absolute;right:-30px;bottom:-42px;width:145px;height:145px;border:1px solid var(--evidence-accent);border-radius:50%;opacity:.22;pointer-events:none}
+.evidence-card::before{content:"";position:absolute;right:28px;bottom:19px;width:56px;height:1px;background:var(--evidence-accent);opacity:.45;transform:rotate(-36deg);pointer-events:none}
+.network-route{position:absolute;right:26px;top:24px;width:104px;height:66px;border-top:1px solid var(--route-accent);border-right:1px solid var(--route-accent);border-radius:0 44px 0 0;opacity:.42;pointer-events:none}
+.network-route::after{content:"";position:absolute;right:-4px;bottom:-4px;width:7px;height:7px;border-radius:50%;background:var(--route-accent);box-shadow:0 0 10px var(--route-accent)}
+.synthesis-satellite{position:relative;width:78px;height:38px;flex:0 0 78px}
+.synthesis-satellite .body{position:absolute;left:28px;top:11px;width:23px;height:16px;border:2px solid #e9eef5;border-radius:3px;background:#172536;transform:rotate(-12deg)}
+.synthesis-satellite .panel{position:absolute;top:14px;width:25px;height:10px;border:1px solid oklch(0.82 0.13 185 / .85);background:repeating-linear-gradient(90deg,#174861 0 4px,#0c2638 4px 6px)}
+.synthesis-satellite .panel.left{left:0}.synthesis-satellite .panel.right{right:0}.synthesis-satellite .dish{position:absolute;left:48px;top:6px;width:16px;height:16px;border:2px solid #ffc857;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;transform:rotate(35deg)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </helmet>
@@ -256,12 +282,14 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
 
       <sc-if value="{{ s5 }}" hint-placeholder-val="{{ false }}">
         <div class="slide-panel" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:36px;padding:0 100px">
-          <div>
+          <div class="recon-header">
             <div style="font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.25em;color:oklch(0.82 0.13 185);display:flex;align-items:center;gap:12px;animation:riseIn 1.1s cubic-bezier(0.22,1,0.36,1) 0.1s both"><span style="display:inline-block;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:10px solid currentColor"></span>04 · RECON — SINGAPORE</div>
             <h1 style="margin:14px 0 0;font-size:58px;font-weight:700;line-height:1.1;text-wrap:pretty;animation:riseIn 1.1s cubic-bezier(0.22,1,0.36,1) 0.4s both">We don't have to invent this. Singapore already runs it.</h1>
+            <div class="orbit-scene" aria-hidden="true"><div class="orbit-ring one"></div><div class="orbit-ring two"></div><div class="signal-beam a"></div><div class="signal-beam b"></div><div class="orbit-satellite"><i></i></div><div class="orbit-earth"></div></div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
-            <div style="background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:16px;{{ sgCard1 }}">
+            <div class="evidence-card" style="--evidence-accent:oklch(0.82 0.13 185 / .8);background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:16px;{{ sgCard1 }}">
+              <div class="network-route" style="--route-accent:oklch(0.82 0.13 185)"></div>
               <div style="font-size:30px;font-weight:600">Singpass &amp; Myinfo</div>
               <div style="display:flex;gap:36px">
                 <div><div style="font-size:46px;font-weight:700;color:oklch(0.82 0.13 185)">5M</div><div style="font-size:17px;color:#8ba1b7">users</div></div>
@@ -270,7 +298,8 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
               </div>
               <p style="margin:0;font-size:20px;color:#8ba1b7;line-height:1.5;text-wrap:pretty">Myinfo reuses data the government already holds, with consent — no repeated form-filling <span style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#54677c">[6], [7]</span></p>
             </div>
-            <div style="background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:16px;{{ sgCard2 }}">
+            <div class="evidence-card" style="--evidence-accent:oklch(0.82 0.13 75 / .85);background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:16px;{{ sgCard2 }}">
+              <div class="network-route" style="--route-accent:oklch(0.82 0.13 75)"></div>
               <div style="font-size:30px;font-weight:600">GoBusiness</div>
               <div style="display:flex;gap:36px">
                 <div><div style="font-size:46px;font-weight:700;color:oklch(0.82 0.13 185)">120+</div><div style="font-size:17px;color:#8ba1b7">e-services</div></div>
@@ -285,12 +314,14 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
 
       <sc-if value="{{ s6 }}" hint-placeholder-val="{{ false }}">
         <div class="slide-panel" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:36px;padding:0 100px">
-          <div>
+          <div class="recon-header">
             <div style="font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.25em;color:oklch(0.82 0.13 185);display:flex;align-items:center;gap:12px;animation:riseIn 1.1s cubic-bezier(0.22,1,0.36,1) 0.1s both"><span style="display:inline-block;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:10px solid currentColor"></span>05 · RECON — INTERNATIONAL</div>
             <h1 style="margin:14px 0 0;font-size:58px;font-weight:700;line-height:1.1;text-wrap:pretty;animation:riseIn 1.1s cubic-bezier(0.22,1,0.36,1) 0.4s both">Peer regulators made this move years ago</h1>
+            <div class="orbit-scene" aria-hidden="true"><div class="orbit-ring one"></div><div class="orbit-ring two"></div><div class="signal-beam a"></div><div class="signal-beam b"></div><div class="orbit-satellite"><i></i></div><div class="orbit-earth"></div></div>
           </div>
           <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:24px">
-            <div style="background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:14px;{{ intlCard1 }}">
+            <div class="evidence-card" style="--evidence-accent:oklch(0.82 0.13 185 / .8);background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:14px;{{ intlCard1 }}">
+              <div class="network-route" style="--route-accent:oklch(0.82 0.13 185)"></div>
               <div style="font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:0.15em;color:#8ba1b7">FCC · UNITED STATES</div>
               <div style="font-size:30px;font-weight:600">ICFS — electronic filing is mandatory</div>
               <div style="display:flex;flex-direction:column;gap:11px;font-size:21px;color:#8ba1b7">
@@ -299,7 +330,8 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
                 <div style="display:flex;gap:14px"><span style="color:oklch(0.82 0.13 185);font-family:'IBM Plex Mono',monospace">→</span><span style="text-wrap:pretty">Incomplete applications dismissed early — not discovered late <span style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#54677c">[10]</span></span></div>
               </div>
             </div>
-            <div style="background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:14px;{{ intlCard2 }}">
+            <div class="evidence-card" style="--evidence-accent:oklch(0.82 0.13 75 / .85);background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:14px;{{ intlCard2 }}">
+              <div class="network-route" style="--route-accent:oklch(0.82 0.13 75)"></div>
               <div style="font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:0.15em;color:#8ba1b7">COMMERCIAL ENGINES</div>
               <div style="font-size:30px;font-weight:600">The tech is off the shelf</div>
               <div style="display:flex;flex-direction:column;gap:11px;font-size:21px;color:#8ba1b7">
@@ -354,7 +386,7 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
 
           <div class="converge-bar" style="{{ litConverge }}">
             <div>
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:0.2em;color:oklch(0.82 0.13 185)">WHERE ALL THREE AGREE</div>
+              <div style="display:flex;align-items:center;gap:14px"><div class="synthesis-satellite" aria-hidden="true"><div class="panel left"></div><div class="body"></div><div class="panel right"></div><div class="dish"></div></div><div style="font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:0.2em;color:oklch(0.82 0.13 185)">WHERE ALL THREE AGREE</div></div>
               <div style="font-size:22px;font-weight:600;margin-top:6px;color:#e9eef5">None of them<br>automates the decision.</div>
             </div>
             <div style="border-left:1px solid oklch(0.82 0.13 185 / 0.35);padding-left:34px;font-size:26px;line-height:1.35;text-wrap:pretty">Every system structures the <strong style="color:#e9eef5">routine work</strong> and leaves the <strong style="color:#e9eef5">expert judgement</strong> with the regulator <span style="font-family:'IBM Plex Mono',monospace;font-size:16px;color:#54677c">[8], [10], [12], [13]</span></div>
@@ -805,5 +837,3 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
-
-

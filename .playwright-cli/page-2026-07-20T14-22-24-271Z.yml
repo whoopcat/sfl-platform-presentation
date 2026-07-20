@@ -1,0 +1,66 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]: SFL PLATFORM
+      - generic [ref=e7]: // SATELLITE FILING & LICENSING
+    - generic [ref=e8]:
+      - generic [ref=e9]: UCS1001 · TEAM PROPOSAL
+      - generic [ref=e10]: RECON·SG
+      - generic [ref=e11]: 06 / 15
+  - generic [ref=e180]:
+    - generic [ref=e181]:
+      - generic [ref=e182]: 04 · RECON — SINGAPORE
+      - heading "We don't have to invent this. Singapore already runs it." [level=1] [ref=e184]
+    - generic [ref=e185]:
+      - generic [ref=e186]:
+        - generic [ref=e187]: Singpass & Myinfo
+        - generic [ref=e188]:
+          - generic [ref=e189]:
+            - generic [ref=e190]: 5M
+            - generic [ref=e191]: users
+          - generic [ref=e192]:
+            - generic [ref=e193]: 2,700+
+            - generic [ref=e194]: services
+          - generic [ref=e195]:
+            - generic [ref=e196]: "800"
+            - generic [ref=e197]: agencies
+        - paragraph [ref=e198]: Myinfo reuses data the government already holds, with consent — no repeated form-filling [6], [7]
+      - generic [ref=e199]:
+        - generic [ref=e200]: GoBusiness
+        - generic [ref=e201]:
+          - generic [ref=e202]:
+            - generic [ref=e203]: 120+
+            - generic [ref=e204]: e-services
+          - generic [ref=e205]:
+            - generic [ref=e206]: 6M+
+            - generic [ref=e207]: G2B transactions
+        - paragraph [ref=e208]: A licensing portal can guide applicants through requirements — while the agency keeps the decision [8]
+    - paragraph [ref=e209]:
+      - strong [ref=e210]: "The lesson:"
+      - text: structured forms + verified data cut routine checks. Eligibility stays with officers.
+  - generic [ref=e29]:
+    - generic [ref=e30]:
+      - button "S1 · CHENGXI" [ref=e31] [cursor=pointer]
+      - button "S2 · SUBQUE" [ref=e32] [cursor=pointer]
+      - button "S3 · JIN YONG" [ref=e33] [cursor=pointer]
+      - button "S4 · PEI QI" [ref=e34] [cursor=pointer]
+      - button "S5 · RACHEL" [ref=e35] [cursor=pointer]
+    - generic [ref=e38]:
+      - button [ref=e39] [cursor=pointer]
+      - button [ref=e40] [cursor=pointer]
+      - button [ref=e41] [cursor=pointer]
+      - button [ref=e42] [cursor=pointer]
+      - button [ref=e43] [cursor=pointer]
+      - button [active] [ref=e44] [cursor=pointer]
+      - button [ref=e45] [cursor=pointer]
+      - button [ref=e46] [cursor=pointer]
+      - button [ref=e47] [cursor=pointer]
+      - button [ref=e48] [cursor=pointer]
+      - button [ref=e49] [cursor=pointer]
+      - button [ref=e50] [cursor=pointer]
+      - button [ref=e51] [cursor=pointer]
+      - button [ref=e52] [cursor=pointer]
+      - button [ref=e53] [cursor=pointer]
+    - generic [ref=e54]:
+      - button "←" [ref=e55] [cursor=pointer]
+      - button "→" [ref=e56] [cursor=pointer]

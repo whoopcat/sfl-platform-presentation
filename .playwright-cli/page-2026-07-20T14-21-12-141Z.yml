@@ -1,0 +1,46 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]: SFL PLATFORM
+      - generic [ref=e7]: // SATELLITE FILING & LICENSING
+    - generic [ref=e8]:
+      - generic [ref=e9]: UCS1001 · TEAM PROPOSAL
+      - generic [ref=e10]: LAUNCH
+      - generic [ref=e11]: 01 / 15
+  - generic [ref=e13]:
+    - generic [ref=e14]: SG
+    - generic [ref=e20]: UCS1001 · TEAM PROPOSAL · MISSION BRIEFING
+    - heading "One platform to clear Singapore's path to orbit" [level=1] [ref=e21]: One platform to clearSingapore's path to orbit
+    - paragraph [ref=e22]: A centralised filing and licensing platform for IMDA that provides structured submissions, early validation and clearer application tracking.
+    - generic [ref=e23]:
+      - generic [ref=e24]: Ngui Chengxi
+      - generic [ref=e25]: Subque
+      - generic [ref=e26]: Pha Jin Yong
+      - generic [ref=e27]: Sim Pei Qi
+      - generic [ref=e28]: Rachel Cheng
+  - generic [ref=e29]:
+    - generic [ref=e30]:
+      - button "S1 · CHENGXI" [ref=e31] [cursor=pointer]
+      - button "S2 · SUBQUE" [ref=e32] [cursor=pointer]
+      - button "S3 · JIN YONG" [ref=e33] [cursor=pointer]
+      - button "S4 · PEI QI" [ref=e34] [cursor=pointer]
+      - button "S5 · RACHEL" [ref=e35] [cursor=pointer]
+    - generic [ref=e38]:
+      - button [ref=e39] [cursor=pointer]
+      - button [ref=e40] [cursor=pointer]
+      - button [ref=e41] [cursor=pointer]
+      - button [ref=e42] [cursor=pointer]
+      - button [ref=e43] [cursor=pointer]
+      - button [ref=e44] [cursor=pointer]
+      - button [ref=e45] [cursor=pointer]
+      - button [ref=e46] [cursor=pointer]
+      - button [ref=e47] [cursor=pointer]
+      - button [ref=e48] [cursor=pointer]
+      - button [ref=e49] [cursor=pointer]
+      - button [ref=e50] [cursor=pointer]
+      - button [ref=e51] [cursor=pointer]
+      - button [ref=e52] [cursor=pointer]
+      - button [ref=e53] [cursor=pointer]
+    - generic [ref=e54]:
+      - button "←" [ref=e55] [cursor=pointer]
+      - button "→" [ref=e56] [cursor=pointer]
