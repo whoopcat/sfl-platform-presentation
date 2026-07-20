@@ -62,6 +62,21 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
 .package-track{position:absolute;left:8%;right:8%;bottom:20px;height:2px;background:#31526f;overflow:visible}
 .package-track::after{content:"";position:absolute;top:-4px;left:0;width:10px;height:10px;border-radius:50%;background:oklch(0.82 0.13 185);box-shadow:0 0 14px oklch(0.82 0.13 185);animation:routeTravel 5s ease-in-out infinite}
 .inbox-live{animation:inboxPulse 3.2s ease-in-out infinite}
+/* Literature synthesis: visual evidence map, revealed in deliberate speaking beats. */
+@keyframes evidenceBeam{0%{transform:translateX(-115%);opacity:0}18%,78%{opacity:1}100%{transform:translateX(265%);opacity:0}}
+@keyframes evidenceHalo{0%,100%{box-shadow:0 0 0 0 oklch(0.82 0.13 185 / .06),0 0 24px oklch(0.82 0.13 185 / .08)}50%{box-shadow:0 0 0 13px oklch(0.82 0.13 185 / 0),0 0 35px oklch(0.82 0.13 185 / .20)}}
+@keyframes orbitDrift{0%,100%{transform:translate(0,0) rotate(-8deg)}50%{transform:translate(9px,-8px) rotate(3deg)}}
+@keyframes graphRise{from{transform:scaleY(.18);opacity:.22}to{transform:scaleY(1);opacity:1}}
+.evidence-hub{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(17,24,35,.98),rgba(14,29,43,.96));border:1px solid oklch(0.82 0.13 185 / .46);box-shadow:inset 0 0 42px oklch(0.82 0.13 185 / .05),0 0 34px oklch(0.82 0.13 185 / .08)}
+.evidence-hub::before{content:"";position:absolute;top:0;bottom:0;width:38%;background:linear-gradient(90deg,transparent,oklch(0.82 0.13 185 / .36),transparent);animation:evidenceBeam 4.6s ease-in-out infinite;pointer-events:none}
+.evidence-orbit{position:absolute;right:30px;top:50%;width:118px;height:118px;margin-top:-59px;border:1px solid oklch(0.82 0.13 185 / .30);border-radius:50%;animation:evidenceHalo 3.4s ease-out infinite;pointer-events:none}
+.evidence-orbit::before{content:"";position:absolute;inset:19px;border:1px dashed oklch(0.82 0.13 185 / .28);border-radius:50%}
+.evidence-orbit::after{content:"";position:absolute;top:-5px;left:49px;width:11px;height:11px;border-radius:50%;background:oklch(0.82 0.13 185);box-shadow:0 0 12px oklch(0.82 0.13 185);animation:orbitDrift 3.5s ease-in-out infinite}
+.evidence-bars span{display:block;width:8px;border-radius:3px 3px 0 0;background:var(--bar);transform-origin:bottom;animation:graphRise .6s cubic-bezier(.22,1,.36,1) both}
+.source-chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid #2a3a50;border-radius:999px;color:#9bb0c6;font-family:'IBM Plex Mono',monospace;font-size:14px!important;letter-spacing:.04em;background:#0c1420}
+.source-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--dot);box-shadow:0 0 9px var(--dot)}
+.principle-card{position:relative;overflow:hidden;min-height:162px;background:rgba(17,24,35,.94);border:1px solid #2a3a50;border-radius:12px;padding:22px 24px}
+.principle-card::after{content:"";position:absolute;right:-25px;bottom:-25px;width:100px;height:100px;border:1px solid var(--accent);border-radius:50%;opacity:.25}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </helmet>
@@ -302,31 +317,11 @@ a:hover{color:oklch(0.9 0.13 185);text-decoration:underline}
       </sc-if>
 
       <sc-if value="{{ s7 }}" hint-placeholder-val="{{ false }}">
-        <div class="slide-panel" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:30px;padding:0 100px">
-          <div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.25em;color:oklch(0.82 0.13 185);display:flex;align-items:center;gap:12px;animation:riseIn .42s ease-out both"><span style="display:inline-block;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:10px solid currentColor"></span>06 · LITERATURE SYNTHESIS</div>
-            <h1 style="margin:14px 0 0;font-size:54px;font-weight:700;line-height:1.1;text-wrap:pretty">The evidence converges on three design principles</h1>
-            <p style="margin:16px 0 0;font-size:23px;color:#8ba1b7;line-height:1.5;max-width:1460px;text-wrap:pretty">Research question: How can IMDA reduce avoidable processing friction without weakening regulatory judgement?</p>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-            <div style="background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-top:3px solid oklch(0.82 0.13 185);border-radius:14px;padding:30px;{{ litCard1 }}">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.12em;color:oklch(0.82 0.13 185)">01 · REUSE TRUST</div>
-              <div style="font-size:29px;font-weight:600;margin:16px 0 10px">Start with government identity</div>
-              <p style="margin:0;font-size:20px;color:#8ba1b7;line-height:1.5;text-wrap:pretty">Singpass, Corppass and Myinfo show that verified identity and consent-based data reuse can remove repeated entry without creating new credentials <span class="source-note">[6], [7], [15]</span>.</p>
-            </div>
-            <div style="background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-top:3px solid oklch(0.82 0.13 75);border-radius:14px;padding:30px;{{ litCard2 }}">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.12em;color:oklch(0.82 0.13 75)">02 · VALIDATE EARLY</div>
-              <div style="font-size:29px;font-weight:600;margin:16px 0 10px">Move checks to submission</div>
-              <p style="margin:0;font-size:20px;color:#8ba1b7;line-height:1.5;text-wrap:pretty">FCC's ICFS and commercial e-licensing tools support structured filing, immediate references and early completeness checks before analyst review <span class="source-note">[9], [10], [12], [13]</span>.</p>
-            </div>
-            <div style="background:rgba(17,24,35,0.9);border:1px solid #1e2a3a;border-top:3px solid #61df87;border-radius:14px;padding:30px;{{ litCard3 }}">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.12em;color:#61df87">03 · PRESERVE DISCRETION</div>
-              <div style="font-size:29px;font-weight:600;margin:16px 0 10px">Automate checks, not decisions</div>
-              <p style="margin:0;font-size:20px;color:#8ba1b7;line-height:1.5;text-wrap:pretty">The strongest model separates objective validation from merits-based judgement: software flags gaps, applicants correct them, and officers retain the final decision <span class="source-note">[8], [10], [12], [13]</span>.</p>
-            </div>
-          </div>
-          <div style="background:oklch(0.82 0.13 185 / .08);border:1px solid oklch(0.82 0.13 185 / .55);border-radius:12px;padding:20px 28px;font-size:23px;{{ litConclusion }}"><strong style="color:oklch(0.82 0.13 185)">Design implication:</strong> integrate proven components around an IMDA-owned rules layer instead of digitising the existing inbox or rebuilding every capability from scratch.</div>
-          <div class="source-note" style="position:absolute;bottom:20px;left:100px;right:100px;font-family:'IBM Plex Mono',monospace;color:#54677c;letter-spacing:0.04em">Synthesis of sources [6]-[10], [12], [13] and [15]. Full IEEE references appear at the end.</div>
+        <div class="slide-panel" style="position:absolute;inset:0;padding:58px 100px 52px;display:grid;grid-template-rows:auto 1fr auto;gap:24px">
+          <div style="display:flex;align-items:end;justify-content:space-between;gap:50px"><div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.25em;color:oklch(0.82 0.13 185);display:flex;align-items:center;gap:12px;animation:riseIn .42s ease-out both"><span style="display:inline-block;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:10px solid currentColor"></span>06 · LITERATURE SYNTHESIS</div><h1 style="margin:12px 0 0;font-size:54px;font-weight:700;line-height:1.1;text-wrap:pretty">Three evidence streams. One clear design choice.</h1></div><div style="font-size:22px;color:#8ba1b7;max-width:490px;line-height:1.35;text-wrap:pretty;{{ litQuestion }}">How do we remove friction <strong style="color:#e9eef5">without</strong> automating regulatory judgement?</div></div>
+          <div style="display:grid;grid-template-columns:1.2fr .95fr;gap:26px;min-height:0"><div class="evidence-hub" style="border-radius:14px;padding:28px 34px;{{ litMap }}"><div style="position:relative;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.16em;color:oklch(.82 .13 185)">WHAT THE LITERATURE AGREES ON</div><div style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px"><div style="text-align:center"><div style="height:94px;display:flex;align-items:end;justify-content:center;gap:10px" class="evidence-bars"><span style="--bar:#22e6d9;height:36%;animation-delay:.12s"></span><span style="--bar:#22e6d9;height:61%;animation-delay:.22s"></span><span style="--bar:#22e6d9;height:84%;animation-delay:.32s"></span></div><div style="font-family:'IBM Plex Mono',monospace;font-size:16px;color:#22e6d9;margin-top:11px">TRUSTED IDENTITY</div></div><div style="text-align:center"><div style="height:94px;display:flex;align-items:end;justify-content:center;gap:10px" class="evidence-bars"><span style="--bar:#ffc857;height:27%;animation-delay:.18s"></span><span style="--bar:#ffc857;height:64%;animation-delay:.28s"></span><span style="--bar:#ffc857;height:91%;animation-delay:.38s"></span></div><div style="font-family:'IBM Plex Mono',monospace;font-size:16px;color:#ffc857;margin-top:11px">EARLY CHECKS</div></div><div style="text-align:center"><div style="height:94px;display:flex;align-items:end;justify-content:center;gap:10px" class="evidence-bars"><span style="--bar:#61df87;height:45%;animation-delay:.24s"></span><span style="--bar:#61df87;height:69%;animation-delay:.34s"></span><span style="--bar:#61df87;height:88%;animation-delay:.44s"></span></div><div style="font-family:'IBM Plex Mono',monospace;font-size:16px;color:#61df87;margin-top:11px">HUMAN DECISION</div></div></div><div style="position:relative;z-index:2;margin-top:25px;border-top:1px solid #2a3a50;padding-top:19px;display:flex;gap:14px;align-items:center;{{ litImplication }}"><div style="width:38px;height:38px;border-radius:50%;border:1px solid oklch(.82 .13 185);display:flex;align-items:center;justify-content:center;color:oklch(.82 .13 185);font-family:'IBM Plex Mono',monospace;font-size:20px">→</div><div style="font-size:27px;font-weight:600;line-height:1.2">Design around proven services.<br><span style="color:#8ba1b7;font-size:21px;font-weight:400">Do not digitise the inbox.</span></div></div><div class="evidence-orbit"></div></div><div style="display:flex;flex-direction:column;justify-content:center;gap:15px;{{ litSources }}"><div class="source-chip" style="--dot:#22e6d9">Singapore digital identity · [6] [7] [15]</div><div class="source-chip" style="--dot:#ffc857">FCC ICFS &amp; e-licensing · [9] [10] [12] [13]</div><div class="source-chip" style="--dot:#61df87">Human-in-the-loop controls · [8] [10] [12] [13]</div><div style="font-size:22px;color:#8ba1b7;line-height:1.42;margin-top:8px">Different systems, same pattern: <strong style="color:#e9eef5">structure routine work; preserve expert judgement.</strong></div></div></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px"><div class="principle-card" style="--accent:#22e6d9;{{ litCard1 }}"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#22e6d9;letter-spacing:.12em">01 · REUSE TRUST</div><div style="font-size:27px;font-weight:600;margin-top:14px">Use verified identity and existing business data.</div></div><div class="principle-card" style="--accent:#ffc857;{{ litCard2 }}"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#ffc857;letter-spacing:.12em">02 · VALIDATE EARLY</div><div style="font-size:27px;font-weight:600;margin-top:14px">Catch missing or inconsistent fields before review.</div></div><div class="principle-card" style="--accent:#61df87;{{ litCard3 }}"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#61df87;letter-spacing:.12em">03 · KEEP DISCRETION</div><div style="font-size:27px;font-weight:600;margin-top:14px">Automate checks. Officers make the decision.</div></div></div>
+          <div style="position:absolute;bottom:18px;left:100px;right:100px;display:flex;justify-content:space-between;align-items:center;gap:28px"><div class="source-note" style="font-family:'IBM Plex Mono',monospace;color:#54677c;letter-spacing:.04em">Synthesis of sources [6]-[10], [12], [13] and [15]. Full IEEE references appear at the end.</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:oklch(.82 .13 185);white-space:nowrap;{{ litConclusion }}">EVIDENCE → PLATFORM RULES LAYER</div></div>
         </div>
       </sc-if>
 
@@ -646,7 +641,7 @@ class Component extends DCLogic {
     }
     this.state = { screen: 0, step: 0, timerOn: false, timerEnd: null, now: Date.now(), showCues: false, stars, scale: 1 };
   }
-  stepsFor(screen) { return ({ 2: 2, 3: 2, 4: 5, 5: 4, 6: 4, 7: 5, 8: 2, 9: 4, 10: 6, 11: 3, 12: 3, 13: 4 })[screen] || 1; }
+  stepsFor(screen) { return ({ 2: 2, 3: 2, 4: 5, 5: 4, 6: 4, 7: 7, 8: 2, 9: 4, 10: 6, 11: 3, 12: 3, 13: 4 })[screen] || 1; }
   componentDidMount() {
     this.iv = setInterval(() => { if (this.state.timerOn) this.setState({ now: Date.now() }); }, 500);
     this.keyHandler = (e) => this.handleKey(e);
@@ -750,7 +745,7 @@ class Component extends DCLogic {
       objReveal: 'background:rgba(17,24,35,0.9);border:1px solid oklch(0.82 0.13 185 / 0.5);border-radius:14px;padding:24px 30px;display:flex;gap:24px;align-items:center;' + infoReveal(4, 4, 0.05),
       sgCard1: infoReveal(5, 1, 0.05), sgCard2: infoReveal(5, 2, 0.05), sgLesson: infoReveal(5, 3, 0.05),
       intlCard1: infoReveal(6, 1, 0.05), intlCard2: infoReveal(6, 2, 0.05), intlLesson: infoReveal(6, 3, 0.05),
-      litCard1: infoReveal(7, 1, 0.04), litCard2: infoReveal(7, 2, 0.04), litCard3: infoReveal(7, 3, 0.04), litConclusion: infoReveal(7, 4, 0.04),
+      litQuestion: infoReveal(7, 0, 0.04), litMap: infoReveal(7, 1, 0.04), litSources: infoReveal(7, 2, 0.04), litCard1: infoReveal(7, 3, 0.04), litCard2: infoReveal(7, 4, 0.04), litCard3: infoReveal(7, 5, 0.04), litImplication: infoReveal(7, 6, 0.04), litConclusion: infoReveal(7, 6, 0.04),
       metric1: infoReveal(10, 1, 0.03), metric2: infoReveal(10, 2, 0.03), metric3: infoReveal(10, 3, 0.03), metric4: infoReveal(10, 4, 0.03), pilotReveal: infoReveal(10, 5, 0.03),
       payoff1: infoReveal(11, 1, 0.04), payoff2: infoReveal(11, 2, 0.04),
       risk1: infoReveal(12, 1, 0.04), risk2: infoReveal(12, 2, 0.04),
